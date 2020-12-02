@@ -20,18 +20,18 @@ class Character:
     def die(self):
         if self.hp == 0:
             print(f"{name} has died")
-    def attacked_debug(self):
+    def attacked_debug(self):                   #Kill yourself
         print("Debug: healthpoints goes to 0")
         self.hp = 0
     def debug_health(self):                     #For testing the adding of health
         self.hp = self.hp + 100
-    def city(self):
+    def city(self):                             #No sirve para nada
         print("City")
     def explore(self):
         print("Where do you wish to travel:")
-        print("[1]Rudbury town")
-        print("[2]Mount Reborn")
-        print("[3]Royal harbour")
+        print("[A]Rudbury town")
+        print("[B]Mount Reborn")
+        print("[C]Royal harbour")
         travel_option = input(">")
         if travel_option == "A":
             print(f"Welcome to Rudbury Town, {self.name}")
@@ -95,7 +95,7 @@ while p.hp > 0:
         p.attacked_debug()
         print(f"Debug: You have {p.hp}")
     if command == "help":
-        print("rest, status")
+        print("explore, rest, status")
         input("...")
     if command == "status":
         print(f"Name: {p.name}")
@@ -109,7 +109,7 @@ while p.hp > 0:
         print(f"Now you have {p.hp}")
     if command == "rest":
         p.rest()
-    if command == "tiogilito":
+    if command == "tiogilito":                          #Add 1000 money
         print("Voi'lá!")
         print("+1000 added to your money. Don't be a huge spender")
         input()
